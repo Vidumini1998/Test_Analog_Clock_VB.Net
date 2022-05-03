@@ -37,6 +37,16 @@ Public Class Form1
         New PointF(55, 120), New PointF(112, 59),
         New PointF(196, 36)}
 
+    Dim GreenPen As Pen = New Pen(Color.Green, 4)
+    Dim Bluepen As Pen = New Pen(Color.Blue, 4)
+    Dim OrangePen As Pen = New Pen(Color.DarkOrange, 5)
+    Dim BlackPen As Pen = New Pen(Color.Black, 6)
+    Dim myPen As New Pen(Color.DarkBlue, 8)
+    Dim NumberFont As New Font("Arial", 25, FontStyle.Bold)
+    Dim ClockFont As New Font("Arial", 18, FontStyle.Bold)
+    Dim ClockFace As New Bitmap(445, 445)
+    Dim gr As Graphics = Graphics.FromImage(ClockFace)
+
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
     End Sub
