@@ -47,6 +47,14 @@ Public Class Form1
     Dim ClockFace As New Bitmap(445, 445)
     Dim gr As Graphics = Graphics.FromImage(ClockFace)
 
+    Private Sub Form1_Load(Sender As Object, e As EventArgs) Handles MyBase.Load
+        Bluepen.SetLineCap(LineCap.Round, LineCap.ArrowAnchor, DashCap.Flat)
+        OrangePen.SetLineCap(LineCap.Round, LineCap.ArrowAnchor, DashCap.Flat)
+        DoubleBuffered = True
+        Me.Size = New Size(570, 470)
+        'Me.FormBorderStyle = 
+    End Sub
+
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
     End Sub
