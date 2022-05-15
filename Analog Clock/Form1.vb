@@ -52,7 +52,10 @@ Public Class Form1
         OrangePen.SetLineCap(LineCap.Round, LineCap.ArrowAnchor, DashCap.Flat)
         DoubleBuffered = True
         Me.Size = New Size(570, 470)
-        'Me.FormBorderStyle = 
+        'Me.FormBorderStyle = WindowsFormsSection.Forms.FormBorderStyle.None
+        Me.TransparencyKey = SystemColors.Control
+        Me.CenterToScreen()
+        'CalculatePermeter()
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
