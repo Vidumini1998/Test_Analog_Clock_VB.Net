@@ -56,6 +56,21 @@ Public Class Form1
         Me.TransparencyKey = SystemColors.Control
         Me.CenterToScreen()
         'CalculatePermeter()
+        'DrawFace()
+        Timer1.Interval = 999
+        Timer1.Start()
+    End Sub
+
+    Protected Overrides Sub OnPaint(ByVal e As System.Windows.Froms.PaintEventArgs)
+        e.Graphics.SmoothingMode = SmoothingMode.HighQuality
+        e.Graphics.DrawImage(ClockFace, Point.Empty)
+        e.Graphics.DrawString(TimeString, ClockFont, Brushes.White, 170, 260)
+        e.Graphics.DrawLine(BlackPen, 220, 220, HrX, HrY)
+        e.Graphics.FillEllipse(Brushes.Black, 210, 210, 20, 20)
+        e.Graphics.DrawLine(OrangePen, 220, 220, MinX, MinY)
+        e.Graphics.FillEllipse(Brushes.DarkOrange, 212, 212, 16, 16)
+        e.Graphics.DrawLine(Bluepen, 220, 220, SecX, SecY)
+        e.Graphics.FillEllipse(Brushes.Blue, 215, 215, 10, 10)
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
