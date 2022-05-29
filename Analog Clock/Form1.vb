@@ -79,7 +79,11 @@ Public Class Form1
         gr.DrawEllipse(GreenPen, 20, 20, 400, 400)
         gr.DrawEllipse(Pens.Red, 120, 120, 200, 200)
         For I As Integer = 1 To 60
-            gr
+            gr.DrawLine(GreenPen, StartPoint(I), EndPoints(I))
+        Next
+
+        For I As Integer = 1 To 12
+            gr.DrawString(I.ToString, NumberFont, Brushes.Black, NumberPoint(I - 1))
         Next
     End Sub
 
