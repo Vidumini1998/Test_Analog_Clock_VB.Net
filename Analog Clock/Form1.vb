@@ -73,6 +73,16 @@ Public Class Form1
         e.Graphics.FillEllipse(Brushes.Blue, 215, 215, 10, 10)
     End Sub
 
+    Sub DrawFace()
+        gr.SmoothingMode = SmoothingMode.HighQuality
+        gr.FillEllipse(Brushes.Beige, 20, 20, 400, 400)
+        gr.DrawEllipse(GreenPen, 20, 20, 400, 400)
+        gr.DrawEllipse(Pens.Red, 120, 120, 200, 200)
+        For I As Integer = 1 To 60
+            gr
+        Next
+    End Sub
+
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
     End Sub
