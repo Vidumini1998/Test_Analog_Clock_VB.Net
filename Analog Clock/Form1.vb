@@ -85,6 +85,10 @@ Public Class Form1
         For I As Integer = 1 To 12
             gr.DrawString(I.ToString, NumberFont, Brushes.Black, NumberPoint(I - 1))
         Next
+
+        gr.FillRectangle(Brushes.DarkBlue, 170, 260, 100, 30)
+        myPen.LineJoin = LineJoin.Round
+        gr.DrawRectangle(myPen, 170, 260, 100, 30)
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
