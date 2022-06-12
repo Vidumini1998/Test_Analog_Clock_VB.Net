@@ -61,7 +61,7 @@ Public Class Form1
         Timer1.Start()
     End Sub
 
-    Protected Overrides Sub OnPaint(ByVal e As System.Windows.Froms.PaintEventArgs)
+    Protected Overrides Sub OnPaint(ByVal e As System.Windows.Forms.PaintEventArgs)
         e.Graphics.SmoothingMode = SmoothingMode.HighQuality
         e.Graphics.DrawImage(ClockFace, Point.Empty)
         e.Graphics.DrawString(TimeString, ClockFont, Brushes.White, 170, 260)
@@ -89,6 +89,20 @@ Public Class Form1
         gr.FillRectangle(Brushes.DarkBlue, 170, 260, 100, 30)
         myPen.LineJoin = LineJoin.Round
         gr.DrawRectangle(myPen, 170, 260, 100, 30)
+    End Sub
+
+    Sub CalculatePerimeter()
+        Dim X, Y As Integer
+        Dim radius As Integer
+        For I As Integer = 1 To 60
+            If I Mod 5 = 0 Then
+                radius = 182
+            Else
+                radius = 190
+            End If
+            X = CInt(radius * Math.Cos((90 - I * 6) * Convert)) + 200
+            Y = 220 - CInt(radius *)
+        Next
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
