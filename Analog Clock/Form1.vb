@@ -55,8 +55,8 @@ Public Class Form1
         'Me.FormBorderStyle = WindowsFormsSection.Forms.FormBorderStyle.None
         Me.TransparencyKey = SystemColors.Control
         Me.CenterToScreen()
-        'CalculatePermeter()
-        'DrawFace()
+        CalculatePerimeter()
+        DrawFace()
         Timer1.Interval = 999
         Timer1.Start()
     End Sub
@@ -101,7 +101,12 @@ Public Class Form1
                 radius = 190
             End If
             X = CInt(radius * Math.Cos((90 - I * 6) * Convert)) + 200
-            Y = 220 - CInt(radius *)
+            Y = 220 - CInt(radius * Math.Sin((90 - I * 6) * Convert))
+            StartPoint(I) = New PointF(X, Y)
+
+            X = CInt(200 * Math.Cos((90 - I * 6) * Convert)) + 200
+            Y = 220 - CInt(200 * Math.Sin((90 - I * 6) * Convert))
+            EndPoints(I) = New PointF(X, Y)
         Next
     End Sub
 
