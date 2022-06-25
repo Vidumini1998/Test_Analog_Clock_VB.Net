@@ -111,6 +111,13 @@ Public Class Form1
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        TimeString = Now.ToString("HH:MM:SS")
+
+        SecAngle = (Now.Second * 6)
+        MinAngle = (Now.Minute + Now.Second / 60) * 6
+        HrAngle = (Now.Hour + Now.Minute / 60) * 30
+        SecX = CInt(SecRadius * Math.Cos((90 - SecAngle) * Convert)) + 220
+        SecY = 220 - CInt(SecRadius * Math.Sin((90 - SecAngle) * Convert))
 
     End Sub
 End Class
