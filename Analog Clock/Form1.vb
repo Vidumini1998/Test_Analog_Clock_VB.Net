@@ -118,6 +118,9 @@ Public Class Form1
         HrAngle = (Now.Hour + Now.Minute / 60) * 30
         SecX = CInt(SecRadius * Math.Cos((90 - SecAngle) * Convert)) + 220
         SecY = 220 - CInt(SecRadius * Math.Sin((90 - SecAngle) * Convert))
+        MinX = CInt(MinRadius * Math.Cos((90 - MinAngle) * Convert)) + 220
+        MinY = 220 - CInt(MinRadius * Math.Sin((90 - MinAngle) * Convert))
+
 
     End Sub
 End Class
