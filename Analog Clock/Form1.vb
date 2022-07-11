@@ -120,7 +120,8 @@ Public Class Form1
         SecY = 220 - CInt(SecRadius * Math.Sin((90 - SecAngle) * Convert))
         MinX = CInt(MinRadius * Math.Cos((90 - MinAngle) * Convert)) + 220
         MinY = 220 - CInt(MinRadius * Math.Sin((90 - MinAngle) * Convert))
-
+        HrX = CInt(HrRadius * Math.Cos((90 - MinAngle) * Convert))
+        HrY = 220 - CInt(HrRadius * Math.Sin((90 - HrRadius) * Convert))
 
     End Sub
 End Class
