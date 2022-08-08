@@ -39,7 +39,7 @@ Public Class Form1
 
     Dim GreenPen As Pen = New Pen(Color.Green, 4)
     Dim Bluepen As Pen = New Pen(Color.Blue, 4)
-    Dim OrangePen As Pen = New Pen(Color.DarkOrange, 5)
+    Dim OrangePen As Pen = New Pen(Color.Gold, 5)
     Dim BlackPen As Pen = New Pen(Color.Black, 6)
     Dim myPen As New Pen(Color.DarkBlue, 8)
     Dim NumberFont As New Font("Arial", 25, FontStyle.Bold)
